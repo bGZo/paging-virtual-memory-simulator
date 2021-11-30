@@ -611,6 +611,7 @@ static void simulateLRU(int const physicalFramesNum)
 				if (tmpFrames[j] == reference_string[i])
 				{
 					pagePresent = 1;
+					time(&Times[j]);
 					break;
 				}
 			}
