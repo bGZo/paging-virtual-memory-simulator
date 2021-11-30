@@ -526,6 +526,11 @@ static void simulateOPT(int physicalFramesNum)
 			printVictims();
 			printFaults();
 
+			/*Test Data*/
+			// printf("nextCallIn: ");
+			// for(int k=0;k<physicalFramesNum;k++) printf("%2d->%2d|", k, nextCallIn[k]);
+			/*Test Data End*/
+
 			i++;
 
 			if ((reference_string[i] == -1) | (i == FRAMES_MEMORY_WIDTH))
@@ -678,6 +683,10 @@ static void simulateLRU(int const physicalFramesNum)
 			printVictims();
 			printFaults();
 
+			/*Test Data*/
+			// for(int k=0; k<physicalFramesNum; k++) printf("%d ", Times[k]);
+			/*Test Data End*/
+
 			i++;
 			Sleep(100);
 
@@ -819,6 +828,12 @@ static void simulateLFU(int physicalFramesNum)
 			printFrames(physicalFramesNum);
 			printVictims();
 			printFaults();
+
+			/*Test Data*/
+			// printf("foundEmpty: %d, pagePresent: %d\n",foundEmpty, pagePresent);
+			// for(int k=0;k<10;k++) printf("%2d->%2d|", k, usageFreq[k]);
+			// printf("\n");
+			/*Test Data End*/
 
 			i++;
 
