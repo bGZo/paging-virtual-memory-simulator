@@ -721,7 +721,7 @@ static void simulateLFU(int physicalFramesNum)
 	if (reference_string[0] != -1)
 	{
 		int tmpFrames[MAX_PHYSICAL_FRAMES];
-		int usageFreq[10];
+		int usageFreq[10] = {0};
 		int cntFaults = 0;
 		int i         = 0;
 
@@ -733,7 +733,6 @@ static void simulateLFU(int physicalFramesNum)
 		for (int s = 0; s < MAX_PHYSICAL_FRAMES; s++)
 		{
 			tmpFrames[s] = -1;
-			usageFreq[s] = 0;
 		}
 
 		system("cls");
