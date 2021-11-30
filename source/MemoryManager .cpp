@@ -329,6 +329,7 @@ static void simulateFIFO(int physicalFramesNum)
 					{
 						tmpFrames[j] = reference_string[i];
 						foundEmpty   = 1;
+						cntFaults++;
 					}
 				}
 			}
@@ -460,6 +461,7 @@ static void simulateOPT(int physicalFramesNum)
 					{
 						tmpFrames[j] = reference_string[i];
 						foundEmpty   = 1;
+						cntFaults++;
 					}
 				}
 			}
@@ -622,7 +624,7 @@ static void simulateLRU(int const physicalFramesNum)
 						tmpFrames[j] = reference_string[i];
 						foundEmpty   = 1;
 						time(&Times[j]);
-						
+						cntFaults++;
 					}
 				}
 			}
@@ -773,6 +775,7 @@ static void simulateLFU(int physicalFramesNum)
 					{
 						tmpFrames[j] = reference_string[i];
 						foundEmpty   = 1;
+						cntFaults++;
 					}
 				}
 			}
