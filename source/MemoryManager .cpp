@@ -785,7 +785,7 @@ static void simulateLFU(int physicalFramesNum)
 
 				for (int j = 1; j < physicalFramesNum; j++)
 				{
-					if (usageFreq[physicalFrames[j]] < usageFreq[LFU])
+					if (usageFreq[tmpFrames[j]] < usageFreq[LFU])
 					{
 						LFU      = tmpFrames[j];
 						position = j;
