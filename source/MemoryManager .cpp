@@ -485,8 +485,9 @@ static void simulateOPT(int physicalFramesNum)
 				}
 			}
 
-			for (int j = 1; j < physicalFramesNum; j++)
+			for (int j = 0; j < physicalFramesNum; j++)
 			{
+
 				if ((nextCallIn[OPT] > nextCallIn[j]) & (nextCallIn[j] > -1))
 				{
 					OPT = j;
@@ -494,7 +495,7 @@ static void simulateOPT(int physicalFramesNum)
 
 				if (nextCallIn[j] == -2)
 				{
-					OPT = j;
+					OPT = j; break;
 				}
 			}
 
